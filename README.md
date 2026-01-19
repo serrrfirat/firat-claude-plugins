@@ -1,65 +1,67 @@
 # Firat's Claude Plugins
 
-A curated collection of Claude Code plugins for AI-powered development workflows.
+A curated collection of Claude Code skills for AI-powered development workflows.
 
-## Available Plugins
+## Skills
 
-| Plugin | Description | Tags |
-|--------|-------------|------|
-| [video-to-code](plugins/video-to-code) | Convert video animations and GIFs into React components | animation, react, video, gemini |
+### Animation
+| Skill | Description |
+|-------|-------------|
+| [video-to-code](skills/animation/video-to-code) | Convert video animations and GIFs into React components |
 
 ## Installation
-
-### Install a Single Plugin
 
 ```bash
 # Clone the repo
 git clone https://github.com/serrrfirat/firat-claude-plugins.git
 
-# Load a specific plugin
-claude --plugin-dir ./firat-claude-plugins/plugins/video-to-code
+# Load a specific skill
+claude --plugin-dir ./firat-claude-plugins/skills/animation/video-to-code
+
+# Or load all skills in a category
+claude --plugin-dir ./firat-claude-plugins/skills/animation
 ```
 
-### Install All Plugins
+## Structure
 
-```bash
-# Load all plugins
-claude --plugin-dir ./firat-claude-plugins
+```
+firat-claude-plugins/
+├── .claude-plugin/
+│   └── marketplace.json       # Skill registry
+├── skills/
+│   ├── animation/
+│   │   └── video-to-code/     # Video-to-React conversion
+│   ├── tools/                 # CLI tools & utilities
+│   ├── workflow/              # Development workflows
+│   └── development/           # Code generation & review
+└── docs/
 ```
 
-## Plugin Categories
+## Categories
 
-### Animation & UI
-- **video-to-code** - AI-powered video-to-React conversion using Gemini 2.5 Flash
+- **animation** - UI animations and motion effects
+- **tools** - CLI utilities and helpers
+- **workflow** - Development process automation
+- **development** - Code generation and review
 
 ## Contributing
 
-### Adding a New Plugin
-
 1. Fork this repository
-2. Create your plugin in `plugins/your-plugin-name/`
-3. Follow the standard structure:
+2. Create your skill in the appropriate category: `skills/<category>/<skill-name>/`
+3. Follow the structure:
    ```
-   plugins/your-plugin/
+   skills/<category>/<skill-name>/
    ├── .claude-plugin/
-   │   └── plugin.json      # Required: Plugin manifest
-   ├── commands/            # Slash commands
-   ├── skills/              # Agent skills
+   │   └── plugin.json
+   ├── skills/
+   │   └── <skill-name>/
+   │       └── SKILL.md
+   ├── commands/           # Optional
    └── README.md
    ```
-4. Update `.claude-plugin/marketplace.json` to register your plugin
+4. Update `.claude-plugin/marketplace.json`
 5. Submit a pull request
-
-### Plugin Requirements
-
-- Must have a valid `.claude-plugin/plugin.json` manifest
-- Must include a README.md with usage instructions
-- Should follow Claude Code plugin best practices
-
-## Plugin Development
-
-See the [Plugin Development Guide](docs/plugin-development.md) for detailed instructions on creating plugins.
 
 ## License
 
-MIT - Individual plugins may have their own licenses.
+MIT
