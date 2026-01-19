@@ -11,15 +11,34 @@ A curated collection of Claude Code skills for AI-powered development workflows.
 
 ## Installation
 
+### Claude Code (Recommended)
+
+```bash
+# Add the marketplace
+/plugin marketplace add serrrfirat/firat-claude-plugins
+
+# Install a specific skill
+/plugin install video-to-code@firat-claude-plugins
+```
+
+### Manual Installation
+
 ```bash
 # Clone the repo
 git clone https://github.com/serrrfirat/firat-claude-plugins.git
 
 # Load a specific skill
 claude --plugin-dir ./firat-claude-plugins/skills/animation/video-to-code
+```
 
-# Or load all skills in a category
-claude --plugin-dir ./firat-claude-plugins/skills/animation
+### OpenSkills (Cross-platform)
+
+Works with Claude Code, Cursor, Windsurf, Cline, and other AI agents:
+
+```bash
+npm i -g openskills
+openskills install serrrfirat/firat-claude-plugins
+openskills sync
 ```
 
 ## Structure
@@ -34,7 +53,7 @@ firat-claude-plugins/
 │   ├── tools/                 # CLI tools & utilities
 │   ├── workflow/              # Development workflows
 │   └── development/           # Code generation & review
-└── docs/
+└── AGENTS.md                  # Universal discovery file
 ```
 
 ## Categories
