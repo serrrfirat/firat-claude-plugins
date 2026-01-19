@@ -1,0 +1,26 @@
+{
+  "$schema": "https://raw.githubusercontent.com/anthropics/claude-code/main/schemas/marketplace.json",
+  "name": "firat-claude-plugins",
+  "description": "A collection of Claude Code plugins for AI-powered development workflows",
+  "version": "1.0.0",
+  "owner": {
+    "name": "Firat Sertgoz",
+    "github": "serrrfirat"
+  },
+  "plugins": [
+    {
+      "name": "video-to-code",
+      "description": "Convert video animations and GIFs into React components using AI-powered frame-by-frame analysis",
+      "path": "plugins/video-to-code",
+      "version": "1.0.0",
+      "tags": ["animation", "react", "video", "gemini", "framer-motion"]
+    }
+  ],
+  "categories": [
+    {
+      "name": "Animation & UI",
+      "description": "Plugins for creating animations and UI components",
+      "plugins": ["video-to-code"]
+    }
+  ]
+}

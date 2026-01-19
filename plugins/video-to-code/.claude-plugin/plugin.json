@@ -1,0 +1,10 @@
+{
+  "name": "video-to-code",
+  "description": "Convert video animations and GIFs into React components using AI-powered frame-by-frame analysis",
+  "version": "1.0.0",
+  "author": {
+    "name": "Firat Sertgoz"
+  },
+  "repository": "https://github.com/serrrfirat/claude-video-to-code",
+  "license": "MIT"
+}

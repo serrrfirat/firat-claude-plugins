@@ -1,0 +1,69 @@
+name: Validate Plugins
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate marketplace.json
+        run: |
+          if [ ! -f ".claude-plugin/marketplace.json" ]; then
+            echo "Error: marketplace.json not found"
+            exit 1
+          fi
+          echo "✓ marketplace.json exists"
+
+          # Validate JSON syntax
+          node -e "JSON.parse(require('fs').readFileSync('.claude-plugin/marketplace.json'))"
+          echo "✓ marketplace.json is valid JSON"
+
+      - name: Validate plugin manifests
+        run: |
+          for plugin_dir in plugins/*/; do
+            plugin_name=$(basename "$plugin_dir")
+            manifest="$plugin_dir.claude-plugin/plugin.json"
+
+            if [ ! -f "$manifest" ]; then
+              echo "Error: $plugin_name missing plugin.json"
+              exit 1
+            fi
+
+            # Validate JSON syntax
+            node -e "JSON.parse(require('fs').readFileSync('$manifest'))"
+            echo "✓ $plugin_name has valid plugin.json"
+
+            # Check for README
+            if [ ! -f "$plugin_dir/README.md" ]; then
+              echo "Warning: $plugin_name missing README.md"
+            else
+              echo "✓ $plugin_name has README.md"
+            fi
+          done
+
+      - name: Check plugin registry
+        run: |
+          node -e "
+            const marketplace = JSON.parse(require('fs').readFileSync('.claude-plugin/marketplace.json'));
+            const fs = require('fs');
+
+            for (const plugin of marketplace.plugins) {
+              const pluginPath = plugin.path + '/.claude-plugin/plugin.json';
+              if (!fs.existsSync(pluginPath)) {
+                console.error('Error: Plugin ' + plugin.name + ' not found at ' + plugin.path);
+                process.exit(1);
+              }
+              console.log('✓ ' + plugin.name + ' registered and exists');
+            }
+          "
