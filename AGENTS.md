@@ -24,6 +24,28 @@
 
 ---
 
+### last30days
+- **Category:** tools
+- **Path:** `skills/tools/last30days`
+- **Description:** Research any topic from the last 30 days across Reddit, X, and the web. Surface community insights, engagement metrics, and write copy-paste-ready prompts.
+- **Tags:** research, reddit, twitter, prompts, trending, discovery
+
+**Capabilities:**
+- Multi-source research across Reddit, X (Twitter), and the web
+- Real engagement metrics (upvotes, likes, reposts) for ranking
+- Intelligent synthesis weighted by community engagement
+- Copy-paste-ready prompt generation in the format communities recommend
+- Flexible modes: Full (both APIs), Partial (one API), Web-only (no APIs)
+- Query types: Prompting, Recommendations, News, General
+
+**Requirements:**
+- Python 3.8+
+- OPENAI_API_KEY (optional, for Reddit research)
+- XAI_API_KEY (optional, for X research)
+- Works without any API keys using WebSearch fallback
+
+---
+
 ## Installation
 
 ### Claude Code

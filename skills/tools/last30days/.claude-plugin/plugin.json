@@ -1,0 +1,10 @@
+{
+  "name": "last30days",
+  "description": "Research any topic from the last 30 days across Reddit, X, and the web. Surface community insights, engagement metrics, and write copy-paste-ready prompts.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Firat Sertgoz"
+  },
+  "repository": "https://github.com/serrrfirat/firat-claude-plugins",
+  "license": "MIT"
+}

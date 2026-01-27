@@ -21,6 +21,14 @@
       "path": "skills/animation/video-to-code",
       "version": "1.0.0",
       "tags": ["animation", "react", "video", "gemini", "framer-motion"]
+    },
+    {
+      "name": "last30days",
+      "description": "Research any topic from the last 30 days across Reddit, X, and the web. Surface community insights, engagement metrics, and write copy-paste-ready prompts.",
+      "category": "tools",
+      "path": "skills/tools/last30days",
+      "version": "1.0.0",
+      "tags": ["research", "reddit", "twitter", "prompts", "trending", "discovery"]
     }
   ]
 }
