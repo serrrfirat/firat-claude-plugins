@@ -13,7 +13,7 @@
     "workflow",
     "development"
   ],
-  "skills": [
+  "plugins": [
     {
       "name": "video-to-code",
       "description": "Convert video animations and GIFs into React components using AI-powered frame-by-frame analysis",
