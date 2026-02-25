@@ -1,4 +1,14 @@
-# HTML Template Reference — Diagram-Centric Layout
+# HTML Template Reference — Cinematic Editorial
+
+## Fonts (Fontshare CDN)
+
+```html
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,500,600,700&display=swap" />
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600,700&display=swap" />
+```
+
+- **Display**: Clash Grotesk — Bold, uppercase, `letter-spacing:-0.02em`, `line-height:0.85`
+- **Body**: General Sans — Weight 300 for copy, 500-600 for labels
 
 ## Mermaid.js Integration
 
@@ -7,15 +17,13 @@
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
 mermaid.initialize({
   startOnLoad: true, theme: 'dark',
-  flowchart: { curve: 'basis', padding: 16 },
   themeVariables: {
-    darkMode: true, background: '#111113',
-    primaryColor: '#FF6B5033', primaryTextColor: '#e4e4e7',
-    primaryBorderColor: '#FF6B50', secondaryColor: '#4F46E533',
-    lineColor: '#71717a', textColor: '#e4e4e7',
-    mainBkg: '#1a1a1e', nodeBorder: '#2a2a30',
-    clusterBkg: '#111113', clusterBorder: '#2a2a30',
-    edgeLabelBackground: '#111113', nodeTextColor: '#e4e4e7'
+    darkMode: true, background: '#1e1916',
+    primaryColor: '#DC9F8522', primaryTextColor: '#EBDCC4',
+    primaryBorderColor: '#DC9F85', lineColor: '#66473B',
+    textColor: '#EBDCC4', mainBkg: '#261f1a',
+    nodeBorder: '#35211A', clusterBkg: '#1e1916',
+    edgeLabelBackground: '#1e1916', nodeTextColor: '#EBDCC4'
   }
 });
 </script>
@@ -27,24 +35,33 @@ Each diagram: `<pre class="mermaid">flowchart TD\n  A-->B</pre>`
 
 ```css
 :root{
-  --bg:#0a0a0a;--surface:#111113;--surface2:#1a1a1e;--surface3:#222228;
-  --border:#2a2a30;--text:#e4e4e7;--text2:#a1a1aa;--text3:#71717a;
-  --coral:#FF6B50;--green:#22c55e;--indigo:#4F46E5;--red:#ef4444;
-  --coral-dim:rgba(255,107,80,.12);--green-dim:rgba(34,197,94,.12);
-  --red-dim:rgba(239,68,68,.12);--indigo-dim:rgba(79,70,229,.12);
-  --radius:12px;--transition:0.25s cubic-bezier(.4,0,.2,1);
+  --bg:#181818;--surface:#1e1916;--surface2:#261f1a;--surface3:#2d2520;
+  --border:#35211A;--border-accent:#66473B;--text:#EBDCC4;--text2:#B6A596;--text3:#8a7565;
+  --coral:#DC9F85;--green:#8B9F6B;--indigo:#8B7EC2;--red:#C26B5A;
+  --coral-dim:rgba(220,159,133,.10);--green-dim:rgba(139,159,107,.10);
+  --red-dim:rgba(194,107,90,.10);--indigo-dim:rgba(139,126,194,.10);
+  --radius:4px;--transition:0.25s cubic-bezier(.4,0,.2,1);
 }
 ```
+
+## Visual Rules
+
+- **No gradients** — Solid colors only
+- **No pill shapes** — Max 4px border-radius everywhere
+- **1px solid borders** — `#35211A` (subtle) or `#66473B` (accent)
+- **Noise overlay** — `body::after` with fractal noise SVG at 0.03 opacity
+- **Text depth** — h1 uses `text-shadow: 2px 2px 0 #66473B`
+- **Uppercase** — All headers and labels use `text-transform:uppercase`
 
 ## Layout: Single-column with sticky nav
 
 ```html
-<nav> <!-- sticky top, blur backdrop -->
+<nav> <!-- sticky, rgba(24,24,24,.92), blur backdrop -->
   <div class="inner">
-    <a href="#section-id">Section Name</a>
+    <a href="#section-id">SECTION NAME</a>
   </div>
 </nav>
-<div class="container"> <!-- max-width:900px, centered -->
+<div class="container"> <!-- max-width:900px -->
   <div class="pr-header">...</div>
   <div class="stats">...</div>
   <section id="section-id">...</section>
@@ -56,12 +73,10 @@ Each diagram: `<pre class="mermaid">flowchart TD\n  A-->B</pre>`
 ### Diagram Card
 ```html
 <div class="diagram-card">
-  <h3>Diagram Title</h3>
+  <h3>DIAGRAM TITLE</h3>
   <div class="diagram-desc">What this diagram shows</div>
-  <pre class="mermaid">
-    stateDiagram-v2
-      [*] --> Idle
-      Idle --> Running : start
+  <pre class="mermaid">stateDiagram-v2
+    [*] --> Idle
   </pre>
 </div>
 ```
@@ -76,7 +91,7 @@ Each diagram: `<pre class="mermaid">flowchart TD\n  A-->B</pre>`
 
 ### Callout
 ```html
-<div class="callout green"> <!-- or coral, indigo (border-left color) -->
+<div class="callout green"> <!-- 2px left border, accent color -->
   <strong>Key insight:</strong> Explanation text
 </div>
 ```
@@ -87,15 +102,6 @@ Each diagram: `<pre class="mermaid">flowchart TD\n  A-->B</pre>`
   ┌──────────────────┐
   │  Schema diagram  │
   └──────────────────┘
-</div>
-```
-
-### Impact Grid
-```html
-<div class="impact-grid"> <!-- 2-col -->
-  <div class="impact-item">
-    <div class="num">5</div><div class="desc">Features shipped</div>
-  </div>
 </div>
 ```
 
@@ -122,24 +128,22 @@ Each diagram: `<pre class="mermaid">flowchart TD\n  A-->B</pre>`
   </ul>
 </div>
 ```
-
-## JavaScript (2 features)
+## JS + Responsive
 
 1. **IntersectionObserver** — highlights active nav link on scroll
 2. **Scroll-to-top button** — appears after 400px scroll
 
 ## Responsive Breakpoints
 
-- Below 900px: nav scrollable, container narrower padding
 - Below 700px: container 16px padding
 - Below 600px: stats 2-col, before-after single-col, impact-grid single-col
-- Fonts: system stack + "SF Mono"/Menlo/Consolas for mono
+- Fonts: Clash Grotesk (display), General Sans (body), SF Mono/Menlo (mono)
 
 ## Color Mapping
 
 | Name | CSS Var | Dim Variant | Use |
 |------|---------|-------------|-----|
-| coral | `--coral` | `--coral-dim` | Primary, file counts, errors |
-| green | `--green` | `--green-dim` | Success, additions, after cards |
-| indigo | `--indigo` | `--indigo-dim` | Secondary, tests |
-| red | `--red` | `--red-dim` | Deletions, before cards |
+| coral-rust | `--coral` | `--coral-dim` | Primary accent, file counts |
+| olive | `--green` | `--green-dim` | Additions, success, after cards |
+| indigo | `--indigo` | `--indigo-dim` | Secondary accent, tests |
+| rust-red | `--red` | `--red-dim` | Deletions, before cards |

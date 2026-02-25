@@ -443,8 +443,8 @@ test("includes mermaid dark theme config", () => {
 
 test("includes CSS variables", () => {
   const html = generateHtml(SAMPLE_DATA);
-  assert.ok(html.includes("--bg:#0a0a0a"));
-  assert.ok(html.includes("--coral:#FF6B50"));
+  assert.ok(html.includes("--bg:#181818"));
+  assert.ok(html.includes("--coral:#DC9F85"));
 });
 
 test("includes IntersectionObserver JS", () => {
