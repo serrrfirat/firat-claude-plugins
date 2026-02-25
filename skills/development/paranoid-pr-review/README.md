@@ -59,6 +59,10 @@ git clone https://github.com/serrrfirat/firat-claude-plugins.git
 claude --plugin-dir ./firat-claude-plugins/skills/development/paranoid-pr-review
 ```
 
+## Credits
+
+This skill was derived from [ilblackdragon](https://github.com/ilblackdragon)'s [`review-pr`](https://github.com/ilblackdragon/skills/blob/main/review-pr/SKILL.md) skill. The original handles reviewing and addressing PR comments; this version pivots to paranoid architect-level review with 6 analysis lenses and inline GitHub comment posting.
+
 ## License
 
 MIT
