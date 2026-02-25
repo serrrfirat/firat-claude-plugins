@@ -91,16 +91,16 @@ Open in browser. Check: mermaid diagrams render, nav highlights on scroll, befor
 
 ## Design Tokens
 
-See `references/html-template.md` for full CSS. Key tokens:
+See `references/html-template.md` for full CSS. High-contrast mono + red (#ef4444) palette:
 
 | Token | Value | Usage |
 |-------|-------|-------|
-| `--bg` | `#0a0a0a` | Page background |
-| `--surface` | `#111113` | Cards, nav |
-| `--coral` | `#FF6B50` | Primary accent |
-| `--green` | `#22c55e` | Additions/success |
-| `--red` | `#ef4444` | Deletions/errors |
-| `--indigo` | `#4F46E5` | Secondary accent |
+| `--bg` | `#000` | Pure black background |
+| `--surface` | `#09090b` | Cards, panels |
+| `--coral` | `#ef4444` | Red pop accent |
+| `--green` | `#4ade80` | Additions/success |
+| `--text` | `#fafafa` | Primary white text |
+| `--text3` | `#888` | Muted gray |
 
 ## Resources
 

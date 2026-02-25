@@ -12,7 +12,7 @@ A curated collection of Claude Code skills for AI-powered development workflows.
 ### Development
 | Skill | Description |
 |-------|-------------|
-| [pr-explainer](skills/development/pr-explainer) | Generate interactive HTML PR reviews with mermaid diagrams and visual explanations |
+| [pr-explainer](skills/development/pr-explainer) | Generate interactive HTML PR reviews with mermaid diagrams, scroll-linked motion, and high-contrast mono+red design |
 
 ## Installation
 

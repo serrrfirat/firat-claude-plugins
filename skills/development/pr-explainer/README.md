@@ -6,12 +6,15 @@ Focus on **understanding without reading code**: flowcharts, state machines, seq
 
 ## Features
 
-- **Mermaid diagrams** — Flowcharts, state machines, sequence diagrams with dark theme
+- **Mermaid diagrams** — Flowcharts, state machines, sequence diagrams
 - **Before/After cards** — Old pain vs new behavior at a glance
 - **ASCII art** — Schema diagrams, file structures, config shapes
 - **Callouts** — Key design decisions highlighted
 - **File table** — All changed files with status, +/-, and purpose
-- **Dark UI** — Professional dark theme with sticky nav and scroll highlights
+- **High-contrast mono UI** — Black (#000) + white (#fafafa) with red (#ef4444) accent
+- **Scroll-linked motion** — Header scale transform, entrance animations
+- **Noise + radial gradient** — 15% fractal noise overlay, dark red vignette
+- **ZTNature typography** — Weight 900 headlines, weight 300 body, JetBrains Mono labels
 - **Single file** — Zero dependencies, opens in any browser
 
 ## Usage
