@@ -66,6 +66,24 @@
 
 ---
 
+### paranoid-pr-review
+- **Category:** development
+- **Path:** `skills/development/paranoid-pr-review`
+- **Description:** Paranoid architect review of a PR — fetches diff, reads changed files, deep review across 6 lenses, posts findings as GitHub comments
+- **Tags:** code-review, security, pr-review, architecture, testing, github
+
+**Capabilities:**
+- Fetches full PR diff and reads every changed file in full context
+- Reviews across 6 lenses: correctness, edge cases, security, test coverage, docs, architecture
+- Posts findings as inline GitHub PR comments at exact file/line
+- Severity-ranked findings table (Critical → Nit)
+- Requires explicit user confirmation before posting comments
+
+**Requirements:**
+- `gh` CLI authenticated with repo access
+
+---
+
 ## Installation
 
 ### Claude Code

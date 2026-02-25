@@ -1,0 +1,10 @@
+{
+  "name": "paranoid-pr-review",
+  "description": "Paranoid architect review of a PR — fetches diff, reads changed files, deep review across 6 lenses, posts findings as GitHub comments",
+  "version": "1.0.0",
+  "author": {
+    "name": "Firat Sertgoz"
+  },
+  "repository": "https://github.com/serrrfirat/firat-claude-plugins",
+  "license": "MIT"
+}

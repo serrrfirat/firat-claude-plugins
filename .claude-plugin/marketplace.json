@@ -37,6 +37,16 @@
       "author": {
         "name": "Firat Sertgoz"
       }
+    },
+    {
+      "name": "paranoid-pr-review",
+      "description": "Paranoid architect review of a PR — fetches diff, reads changed files, deep review across 6 lenses, posts findings as GitHub comments",
+      "category": "development",
+      "source": "./skills/development/paranoid-pr-review",
+      "version": "1.0.0",
+      "author": {
+        "name": "Firat Sertgoz"
+      }
     }
   ]
 }

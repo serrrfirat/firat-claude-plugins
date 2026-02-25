@@ -13,6 +13,7 @@ A curated collection of Claude Code skills for AI-powered development workflows.
 | Skill | Description |
 |-------|-------------|
 | [pr-explainer](skills/development/pr-explainer) | Generate interactive HTML PR reviews with mermaid diagrams, scroll-linked motion, and high-contrast mono+red design |
+| [paranoid-pr-review](skills/development/paranoid-pr-review) | Paranoid architect PR review across 6 lenses — posts findings as GitHub comments |
 
 ## Installation
 
@@ -56,7 +57,8 @@ firat-claude-plugins/
 │   ├── animation/
 │   │   └── video-to-code/     # Video-to-React conversion
 │   ├── development/
-│   │   └── pr-explainer/      # Interactive PR review pages
+│   │   ├── pr-explainer/      # Interactive PR review pages
+│   │   └── paranoid-pr-review/ # Architect-level code review
 │   ├── tools/                 # CLI tools & utilities
 │   └── workflow/              # Development workflows
 └── AGENTS.md                  # Universal discovery file
