@@ -27,6 +27,16 @@
       "author": {
         "name": "Firat Sertgoz"
       }
+    },
+    {
+      "name": "pr-explainer",
+      "description": "Generate interactive HTML PR reviews with mermaid diagrams, state machines, sequence flows, before/after cards, and ASCII art",
+      "category": "development",
+      "source": "./skills/development/pr-explainer",
+      "version": "1.0.0",
+      "author": {
+        "name": "Firat Sertgoz"
+      }
     }
   ]
 }

@@ -46,6 +46,26 @@
 
 ---
 
+### pr-explainer
+- **Category:** development
+- **Path:** `skills/development/pr-explainer`
+- **Description:** Generate interactive HTML PR reviews with mermaid diagrams, state machines, sequence flows, before/after cards, and ASCII art
+- **Tags:** pr-review, mermaid, diagrams, html, code-review, documentation
+
+**Capabilities:**
+- Generate single self-contained HTML file from PR data
+- Mermaid.js diagrams: flowcharts, state machines, sequence diagrams
+- Before/After comparison cards for each feature
+- ASCII art for schemas, file structures, config shapes
+- Dark theme UI with sticky nav and scroll-to-top
+- File change table with status, additions/deletions, purpose
+- XSS-safe HTML escaping
+
+**Requirements:**
+- Node.js 18+
+
+---
+
 ## Installation
 
 ### Claude Code

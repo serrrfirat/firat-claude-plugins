@@ -9,6 +9,11 @@ A curated collection of Claude Code skills for AI-powered development workflows.
 |-------|-------------|
 | [video-to-code](skills/animation/video-to-code) | Convert video animations and GIFs into React components |
 
+### Development
+| Skill | Description |
+|-------|-------------|
+| [pr-explainer](skills/development/pr-explainer) | Generate interactive HTML PR reviews with mermaid diagrams and visual explanations |
+
 ## Installation
 
 ### Claude Code (Recommended)
@@ -50,9 +55,10 @@ firat-claude-plugins/
 ├── skills/
 │   ├── animation/
 │   │   └── video-to-code/     # Video-to-React conversion
+│   ├── development/
+│   │   └── pr-explainer/      # Interactive PR review pages
 │   ├── tools/                 # CLI tools & utilities
-│   ├── workflow/              # Development workflows
-│   └── development/           # Code generation & review
+│   └── workflow/              # Development workflows
 └── AGENTS.md                  # Universal discovery file
 ```
 
