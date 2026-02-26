@@ -14,12 +14,12 @@ A curated collection of Claude Code skills for AI-powered development workflows.
 |-------|-------------|
 | [pr-explainer](skills/development/pr-explainer) | Generate interactive HTML PR reviews with mermaid diagrams, scroll-linked motion, and high-contrast mono+red design |
 | [paranoid-pr-review](skills/development/paranoid-pr-review) | Paranoid architect PR review across 6 lenses — posts findings as GitHub comments |
+| [pr-feedback-audit](skills/development/pr-feedback-audit) | Audit GitHub PR review threads to verify all feedback was addressed |
 
 ### Tools
 | Skill | Description |
 |-------|-------------|
 | [last30days](skills/tools/last30days) | Research any topic from the last 30 days across Reddit, X, and the web |
-| [pr-feedback-audit](skills/tools/pr-feedback-audit) | Audit GitHub PR review threads to verify all feedback was addressed |
 
 ## Installation
 
@@ -64,10 +64,10 @@ firat-claude-plugins/
 │   │   └── video-to-code/     # Video-to-React conversion
 │   ├── development/
 │   │   ├── pr-explainer/      # Interactive PR review pages
-│   │   └── paranoid-pr-review/ # Architect-level code review
-│   ├── tools/
-│   │   ├── last30days/        # Topic research tool
+│   │   ├── paranoid-pr-review/ # Architect-level code review
 │   │   └── pr-feedback-audit/ # PR review thread auditor
+│   ├── tools/
+│   │   └── last30days/        # Topic research tool
 │   └── workflow/              # Development workflows
 └── AGENTS.md                  # Universal discovery file
 ```
