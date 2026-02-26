@@ -51,8 +51,8 @@
     {
       "name": "pr-feedback-audit",
       "description": "Audit GitHub PR review threads to verify all feedback was addressed. Generates structured report with resolution status and diff evidence.",
-      "category": "tools",
-      "source": "./skills/tools/pr-feedback-audit",
+      "category": "development",
+      "source": "./skills/development/pr-feedback-audit",
       "version": "1.0.0",
       "author": {
         "name": "Firat Sertgoz"
