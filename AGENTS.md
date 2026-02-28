@@ -84,6 +84,45 @@
 
 ---
 
+### pr-feedback-audit
+- **Category:** development
+- **Path:** `skills/development/pr-feedback-audit`
+- **Description:** Audit GitHub PR review threads to verify all feedback was addressed. Generates structured report with resolution status and diff evidence.
+- **Tags:** code-review, pr-review, github, audit, feedback
+
+**Capabilities:**
+- Fetches all review threads via GitHub GraphQL API
+- Classifies threads as Resolved, Outdated, Addressed, or Unresolved
+- Uses git diff to confirm whether commented lines were modified
+- Generates structured markdown report with evidence
+- Optional auto-resolve for confirmed addressed threads
+
+**Requirements:**
+- `gh` CLI authenticated with repo access
+- Python 3.8+
+
+---
+
+### review-dashboard
+- **Category:** development
+- **Path:** `skills/development/review-dashboard`
+- **Description:** Scan a GitHub repo for open PRs you reviewed or commented on, deep-audit each using pr-feedback-audit and respond-pr methodology, then take actions with draft-first confirmation.
+- **Tags:** code-review, pr-review, github, dashboard, audit, approve, request-changes
+
+**Capabilities:**
+- Discovers all open PRs where you left reviews or comments
+- Two-layer audit: mechanical thread status (pr-feedback-audit) + actual code reading
+- Consolidated report grouping PRs by action needed
+- Draft-first action flow: approve, request-changes, or comment
+- Never posts without explicit user confirmation
+
+**Requirements:**
+- `gh` CLI authenticated with repo access
+- Python 3.8+
+- `pr-feedback-audit` skill installed (for Layer 1)
+
+---
+
 ## Installation
 
 ### Claude Code

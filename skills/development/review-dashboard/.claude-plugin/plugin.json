@@ -1,0 +1,10 @@
+{
+  "name": "review-dashboard",
+  "description": "Scan a GitHub repo for open PRs you reviewed or commented on, deep-audit each using pr-feedback-audit and respond-pr methodology, then take actions (approve, request-changes, comment) with draft-first confirmation.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Firat Sertgoz"
+  },
+  "repository": "https://github.com/serrrfirat/firat-claude-plugins",
+  "license": "MIT"
+}

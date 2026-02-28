@@ -15,6 +15,7 @@ A curated collection of Claude Code skills for AI-powered development workflows.
 | [pr-explainer](skills/development/pr-explainer) | Generate interactive HTML PR reviews with mermaid diagrams, scroll-linked motion, and high-contrast mono+red design |
 | [paranoid-pr-review](skills/development/paranoid-pr-review) | Paranoid architect PR review across 6 lenses — posts findings as GitHub comments |
 | [pr-feedback-audit](skills/development/pr-feedback-audit) | Audit GitHub PR review threads to verify all feedback was addressed |
+| [review-dashboard](skills/development/review-dashboard) | Scan open PRs you reviewed, deep-audit each with two-layer strategy, take actions with draft-first confirmation |
 
 ### Tools
 | Skill | Description |
@@ -65,7 +66,8 @@ firat-claude-plugins/
 │   ├── development/
 │   │   ├── pr-explainer/      # Interactive PR review pages
 │   │   ├── paranoid-pr-review/ # Architect-level code review
-│   │   └── pr-feedback-audit/ # PR review thread auditor
+│   │   ├── pr-feedback-audit/ # PR review thread auditor
+│   │   └── review-dashboard/ # PR review dashboard & actions
 │   ├── tools/
 │   │   └── last30days/        # Topic research tool
 │   └── workflow/              # Development workflows
