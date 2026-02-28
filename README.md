@@ -16,12 +16,12 @@ A curated collection of Claude Code skills for AI-powered development workflows.
 | [paranoid-pr-review](skills/development/paranoid-pr-review) | Paranoid architect PR review across 6 lenses — posts findings as GitHub comments |
 | [pr-feedback-audit](skills/development/pr-feedback-audit) | Audit GitHub PR review threads to verify all feedback was addressed |
 | [review-dashboard](skills/development/review-dashboard) | Scan open PRs you reviewed, deep-audit each with two-layer strategy, take actions with draft-first confirmation |
+| [pr-regression-check](skills/development/pr-regression-check) | Analyze PR diffs for regression risks: breaking changes, default shifts, wire format mutations |
 
 ### Tools
 | Skill | Description |
 |-------|-------------|
 | [last30days](skills/tools/last30days) | Research any topic from the last 30 days across Reddit, X, and the web |
-| [pr-regression-check](skills/tools/pr-regression-check) | Analyze PR diffs for regression risks: breaking changes, default shifts, wire format mutations |
 
 ## Installation
 
@@ -68,10 +68,10 @@ firat-claude-plugins/
 │   │   ├── pr-explainer/      # Interactive PR review pages
 │   │   ├── paranoid-pr-review/ # Architect-level code review
 │   │   ├── pr-feedback-audit/ # PR review thread auditor
-│   │   └── review-dashboard/ # PR review dashboard & actions
-│   ├── tools/
-│   │   ├── last30days/        # Topic research tool
+│   │   ├── review-dashboard/ # PR review dashboard & actions
 │   │   └── pr-regression-check/ # PR regression risk analyzer
+│   ├── tools/
+│   │   └── last30days/        # Topic research tool
 │   └── workflow/              # Development workflows
 └── AGENTS.md                  # Universal discovery file
 ```
