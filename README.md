@@ -21,6 +21,7 @@ A curated collection of Claude Code skills for AI-powered development workflows.
 | Skill | Description |
 |-------|-------------|
 | [last30days](skills/tools/last30days) | Research any topic from the last 30 days across Reddit, X, and the web |
+| [pr-regression-check](skills/tools/pr-regression-check) | Analyze PR diffs for regression risks: breaking changes, default shifts, wire format mutations |
 
 ## Installation
 
@@ -69,7 +70,8 @@ firat-claude-plugins/
 │   │   ├── pr-feedback-audit/ # PR review thread auditor
 │   │   └── review-dashboard/ # PR review dashboard & actions
 │   ├── tools/
-│   │   └── last30days/        # Topic research tool
+│   │   ├── last30days/        # Topic research tool
+│   │   └── pr-regression-check/ # PR regression risk analyzer
 │   └── workflow/              # Development workflows
 └── AGENTS.md                  # Universal discovery file
 ```

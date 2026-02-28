@@ -67,6 +67,16 @@
       "author": {
         "name": "Firat Sertgoz"
       }
+    },
+    {
+      "name": "pr-regression-check",
+      "description": "Analyze GitHub PR diffs for regression risks: breaking behavioral changes, default value shifts, wire format mutations, and config migration gaps.",
+      "category": "development",
+      "source": "./skills/tools/pr-regression-check",
+      "version": "0.1.0",
+      "author": {
+        "name": "Firat Sertgoz"
+      }
     }
   ]
 }

@@ -59,12 +59,12 @@ jobs:
             const marketplace = JSON.parse(require('fs').readFileSync('.claude-plugin/marketplace.json'));
             const fs = require('fs');
 
-            for (const skill of marketplace.skills) {
-              const skillPath = skill.path + '/.claude-plugin/plugin.json';
-              if (!fs.existsSync(skillPath)) {
-                console.error('Error: Skill ' + skill.name + ' not found at ' + skill.path);
+            for (const plugin of marketplace.plugins) {
+              const pluginPath = plugin.source + '/.claude-plugin/plugin.json';
+              if (!fs.existsSync(pluginPath)) {
+                console.error('Error: Plugin ' + plugin.name + ' not found at ' + plugin.source);
                 process.exit(1);
               }
-              console.log('✓ ' + skill.name + ' registered and exists');
+              console.log('✓ ' + plugin.name + ' registered and exists');
             }
           "

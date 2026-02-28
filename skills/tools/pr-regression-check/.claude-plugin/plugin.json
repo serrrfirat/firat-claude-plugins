@@ -1,0 +1,10 @@
+{
+  "name": "pr-regression-check",
+  "description": "Analyze GitHub PR diffs for regression risks: breaking behavioral changes, default value shifts, wire format mutations, and config migration gaps.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Firat Sertgoz"
+  },
+  "repository": "https://github.com/serrrfirat/firat-claude-plugins",
+  "license": "MIT"
+}
