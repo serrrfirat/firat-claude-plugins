@@ -1,0 +1,10 @@
+{
+  "name": "code-review",
+  "description": "Paranoid architect review of local code changes or GitHub PRs for bugs, security issues, missing tests, and undocumented assumptions.",
+  "version": "2.0.0",
+  "author": {
+    "name": "Henry Park"
+  },
+  "repository": "https://github.com/serrrfirat/firat-claude-plugins",
+  "license": "MIT"
+}

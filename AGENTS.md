@@ -84,6 +84,25 @@
 
 ---
 
+### code-review
+- **Category:** development
+- **Path:** `skills/development/code-review`
+- **Description:** Review local diffs or GitHub PRs for bugs, security issues, missing tests, and undocumented assumptions.
+- **Tags:** code-review, security, pr-review, architecture, testing, github
+
+**Capabilities:**
+- Reviews local uncommitted changes, staged changes, recent commits, or GitHub PRs
+- Reads every changed file in full context before writing findings
+- Reviews across 6 lenses: correctness, edge cases, security, test coverage, docs, architecture
+- Produces severity-ranked findings with concrete suggested fixes
+- Can post approved findings as line-level GitHub PR comments
+
+**Requirements:**
+- Git access for local reviews
+- GitHub access and `github` skill for PR reviews
+
+---
+
 ### pr-feedback-audit
 - **Category:** development
 - **Path:** `skills/development/pr-feedback-audit`

@@ -49,6 +49,16 @@
       }
     },
     {
+      "name": "code-review",
+      "description": "Paranoid architect review of local code changes or GitHub PRs for bugs, security issues, missing tests, and undocumented assumptions.",
+      "category": "development",
+      "source": "./skills/development/code-review",
+      "version": "2.0.0",
+      "author": {
+        "name": "Henry Park"
+      }
+    },
+    {
       "name": "pr-feedback-audit",
       "description": "Audit GitHub PR review threads to verify all feedback was addressed. Generates structured report with resolution status and diff evidence.",
       "category": "development",
