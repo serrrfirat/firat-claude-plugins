@@ -1,28 +1,29 @@
 # Code Review
 
-Paranoid architect review of local code changes or GitHub pull requests. The skill checks for bugs, security issues, missing tests, undocumented assumptions, edge cases, and architectural concerns.
+Multi-agent code review orchestrator for GitHub PRs or local worktrees. It spawns specialized reviewer subagents, aggregates their findings, deduplicates overlapping issues, and emits either a batched GitHub PR review or local `.review/findings` files.
 
 ## What it does
 
-1. Reviews local diffs or GitHub pull requests
-2. Reads changed files in full context before writing findings
-3. Reviews across six lenses: correctness, edge cases, security, tests, documentation, and architecture
-4. Produces severity-ranked findings with concrete fixes
-5. Can post approved findings as GitHub PR comments
+1. Runs intent analysis before review when useful
+2. Spawns 5 parallel reviewers: security, bugs, performance/concurrency, tests, and conventions
+3. Aggregates and deduplicates findings by file and line overlap
+4. Posts a single batched GitHub PR review in PR mode
+5. Writes `.review/findings.json` and `.review/findings.md` in local mode
 
 ## Usage
 
 ```text
-review local changes
-review owner/repo#123
-review https://github.com/owner/repo/pull/123
+owner/repo#123
+--local
+--staged
+--since origin/main
 ```
 
 ## Requirements
 
-- Git access for local reviews
-- GitHub access for PR reviews
-- `github` skill available when reviewing or commenting on PRs
+- `gh` CLI authenticated with repo access for PR reviews
+- Git repository for local reviews
+- Claude Code `Agent` tool support for reviewer subagents
 
 ## Installation
 
@@ -42,7 +43,7 @@ claude --plugin-dir ./firat-claude-plugins/skills/development/code-review
 
 ## Credits
 
-Imported from `claude-md/personal/henrypark133/code-review`.
+Imported from `/Users/firatsertgoz/.agents/skills/code-review`, originally requested as `claude-md/personal/henrypark133/code-review`.
 
 ## License
 

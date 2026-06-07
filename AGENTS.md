@@ -87,19 +87,20 @@
 ### code-review
 - **Category:** development
 - **Path:** `skills/development/code-review`
-- **Description:** Review local diffs or GitHub PRs for bugs, security issues, missing tests, and undocumented assumptions.
+- **Description:** Multi-agent code review with 5 parallel reviewer subagents plus intent analysis. Reviews GitHub PRs or local worktrees.
 - **Tags:** code-review, security, pr-review, architecture, testing, github
 
 **Capabilities:**
-- Reviews local uncommitted changes, staged changes, recent commits, or GitHub PRs
-- Reads every changed file in full context before writing findings
-- Reviews across 6 lenses: correctness, edge cases, security, test coverage, docs, architecture
-- Produces severity-ranked findings with concrete suggested fixes
-- Can post approved findings as line-level GitHub PR comments
+- Runs intent analysis before review when useful
+- Spawns security, bugs, performance/concurrency, tests, and conventions reviewers in parallel
+- Aggregates and deduplicates findings by file and line overlap
+- Posts a single batched GitHub PR Review in PR mode
+- Writes `.review/findings.json` and `.review/findings.md` in local mode
 
 **Requirements:**
-- Git access for local reviews
-- GitHub access and `github` skill for PR reviews
+- `gh` CLI authenticated with repo access for PR reviews
+- Git repository for local reviews
+- Claude Code `Agent` tool support for reviewer subagents
 
 ---
 

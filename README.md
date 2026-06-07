@@ -14,7 +14,7 @@ A curated collection of Claude Code skills for AI-powered development workflows.
 |-------|-------------|
 | [pr-explainer](skills/development/pr-explainer) | Generate interactive HTML PR reviews with mermaid diagrams, scroll-linked motion, and high-contrast mono+red design |
 | [paranoid-pr-review](skills/development/paranoid-pr-review) | Paranoid architect PR review across 6 lenses — posts findings as GitHub comments |
-| [code-review](skills/development/code-review) | Review local diffs or GitHub PRs for bugs, security issues, missing tests, and undocumented assumptions |
+| [code-review](skills/development/code-review) | Multi-agent code review with 5 parallel reviewers plus intent analysis for GitHub PRs or local worktrees |
 | [pr-feedback-audit](skills/development/pr-feedback-audit) | Audit GitHub PR review threads to verify all feedback was addressed |
 | [review-dashboard](skills/development/review-dashboard) | Scan open PRs you reviewed, deep-audit each with two-layer strategy, take actions with draft-first confirmation |
 | [pr-regression-check](skills/development/pr-regression-check) | Analyze PR diffs for regression risks: breaking changes, default shifts, wire format mutations |
@@ -68,7 +68,7 @@ firat-claude-plugins/
 │   ├── development/
 │   │   ├── pr-explainer/      # Interactive PR review pages
 │   │   ├── paranoid-pr-review/ # Architect-level code review
-│   │   ├── code-review/       # Local diff and GitHub PR code review
+│   │   ├── code-review/       # Multi-agent PR and local code review
 │   │   ├── pr-feedback-audit/ # PR review thread auditor
 │   │   ├── review-dashboard/ # PR review dashboard & actions
 │   │   └── pr-regression-check/ # PR regression risk analyzer

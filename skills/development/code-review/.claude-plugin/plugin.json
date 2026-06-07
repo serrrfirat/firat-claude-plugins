@@ -1,7 +1,7 @@
 {
   "name": "code-review",
-  "description": "Paranoid architect review of local code changes or GitHub PRs for bugs, security issues, missing tests, and undocumented assumptions.",
-  "version": "2.0.0",
+  "description": "Multi-agent code review with 5 parallel reviewer subagents plus intent analysis. Reviews GitHub PRs or local worktrees.",
+  "version": "1.0.0",
   "author": {
     "name": "Henry Park"
   },
